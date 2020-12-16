@@ -34,7 +34,7 @@ q_descriptions = ['What is PYNQ?', 'Which of the following environments is meant
                   'processing cores.', 'Which of these is not a hardware description language?',
                   'What do nanometers associated with an FPGA indicate?',
                   'Vivado is used to create hardware designs. Which of these things can you create with Vivado to '
-                  'load onto your FPGA into order to configure the device?', 'What does FPGA stand for?',
+                  'load onto your FPGA in order to configure the device?', 'What does FPGA stand for?',
                   'What does ASIC stand for?', 'What is the difference between Microprocessor and Microcontroller?',
                   'Label the image of the PYNQ board below with the appropriate interface name ###',
                   'Label the image of the PYNQ board below with the correct connection name ###']
@@ -386,7 +386,7 @@ rpi_desc = 'Raspberry Pis come with a microprocessor. They\'re pretty powerful, 
 fpga_desc = 'FPGA stands for Field Programmable Gate Array. As you saw from the presentation, they are usable only ' \
             'after they\'ve been configured, creating a device whose architecture is customized for your task. This ' \
             'makes them efficient, adaptable, and useful for plenty of applications--medical devices, spacecrafts, ' \
-            'self-driving cars, etc. Shown below is an evaluation board, with a Spartan-6 FPGA.'
+            'self-driving cars, etc. Shown below is an evaluation board, with a ZYNQberry FPGA.'
 
 platform_options = [('Arduino', 0), ('Raspberry Pi', 1), ('FPGA', 2)]
 p_val = 0
