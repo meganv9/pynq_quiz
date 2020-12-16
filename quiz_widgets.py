@@ -16,14 +16,14 @@ all_answers = []
 q_descriptions = ['What is PYNQ?', 'Which of the following environments is meant to be used with PYNQ?',
                   'What are the the steps to get started with a PYNQ board?',
                   'With PYNQ, hardware system designs are referred to as:',
-                  'Select the ZYNQ Applications:',
+                  'What set of files are necessary to deploy a PYNQ system?',
                   'Fill in the blanks of these descriptions for Raspberry Pis, Arduinos, and FPGAs as discussed '
                   'in the workshop presentation. \n 1. A(n) __ is deployed close to hardware, and can be useful for '
                   'working with sensors and buttons. \n 2. A(n) __ runs an operating system (commonly Linux), '
                   'and acts like a little computer.\n 3. A(n) __ needs its architecture defined by the user.',
-                  'What languages does Jupyter support?',
+                  'What do you need to configure the logic circuit?',
                   'What does the Zynq system on a chip offer: select the appropriate options',
-                  'What component on the PYNQ-Z2 board contains the PS/PL?',
+                  'What component on the board contains the PS/PL?',
                   'True or false: PYNQ offers Arduino and Raspberry Pi interfaces',
                   'Which command is used to install new PYNQ projects using hybrid packages?',
                   'Match these descriptions for FPGAs, (MP)SoCs, and ASICs \n 1. These are created for one '
@@ -34,8 +34,9 @@ q_descriptions = ['What is PYNQ?', 'Which of the following environments is meant
                   'processing cores.', 'Which of these is not a hardware description language?',
                   'What do nanometers associated with an FPGA indicate?',
                   'Vivado is used to create hardware designs. Which of these things can you create with Vivado to '
-                  'load onto your FPGA into order to configure the device?', 'What does FPGA stand for?',
+                  'load onto your FPGA in order to configure the device?', 'What does FPGA stand for?',
                   'What does ASIC stand for?', 'What is the difference between Microprocessor and Microcontroller?',
+                  'Select the ZYNQ Applications:', 'What languages does Jupyter support?',
                   'Label the image of the PYNQ board below with the appropriate interface name ###',
                   'Label the image of the PYNQ board below with the correct connection name ###']
 
@@ -113,14 +114,20 @@ all_options.append(options4)
 all_answers.append(ans4)
 all_feedback.append(fb4)
 
-options5 = ['Automotive driver assistance systems', 'Industrial control systems',
-             'Remote robotic assisted surgery system', 'All of the above']
-ans5 = 'All of the above'
-fb5_a = '[bold red]Incorrect![/bold red]It\'s one of the applications but there are more'
-fb5_b = '[bold red]Incorrect![/bold red]It\'s one of the applications but there are more'
-fb5_c = '[bold red]Incorrect![/bold red]It\'s one of the applications but there are more'
-fb5_d = '[bold green]Correct![/bold green] You got it'
-fb5 = [fb5_a, fb5_b, fb5_c, fb5_d]
+options5 = ['Bitstream (*.bit),  Jupyter Notebook (*.ipynb)', 'Bitstream (*.bit), Hardware Handoff (*.hwh)',
+            'Hardware Handoff (*.hwh), Jupyter Notebook (*ipynb)', ' Java Archive (*.jar), Text (.txt)']
+ans5 = 'Bitstream (*.bit), Hardware Handoff (*.hwh)'
+fb5 = ['[bold red]Close[/bold red]-- but you don\'t necessarily need a Jupyter notebook to deploy a PYNQ system, '
+       'though those notebooks are used to interact with the device.',
+       '[bold green]Correct![/bold green] The bitstream is what is loaded onto the device to configure its '
+       'architecture. '
+       'The hardware hand-off file contains a lot of information about the system on which your application is '
+       'running--including info on clocks, IPs, and various system settings, among other things. Tip: You can also '
+       'save '
+       'the .tcl file created from Vivado to rebuild the hardware block diagram if necessary.',
+       '[bold red]Close[/bold red]-- but you don\'t necessarily need a Jupyter notebook to deploy a PYNQ system, '
+       'though those notebooks are used to interact with the device.',
+       '[bold red]Not quite[/bold red]--recall what files are created in Vivado to work with the PYNQ framework.']
 
 all_options.append(options5)
 all_answers.append(ans5)
@@ -157,12 +164,13 @@ all_options.append(options6)
 all_answers.append(ans6)
 all_feedback.append(fb6)
 
-options7 = ['C, Ruby, Python', 'Julia, Python, R', 'C++, Python', 'C, C++, C#']
-ans7 = 'Julia, Python, R'
-fb7_a = '[bold red]Incorrect![/bold red]'
-fb7_b = '[bold green]Correct[/bold green]'
-fb7_c = '[bold red]Incorrect![/bold red]'
-fb7_d = '[bold red]Incorrect![/bold red]'
+options7 = ['Load/program the logic circuit', 'Load/program the arm microprocessor',
+            'Load/program the configuration memory layer in the FPGA', 'Load/program the ZYNQ 7020 chip']
+ans7 = 'Load/program the configuration memory layer in the FPGA'
+fb7_a = '[bold red]Incorrect[/bold red]'
+fb7_b = '[bold red]Incorrect[/bold red]'
+fb7_c = '[bold green]Correct[/bold green]'
+fb7_d = '[bold red]Incorrect[/bold red]'
 fb7 = [fb7_a, fb7_b, fb7_c, fb7_d]
 
 all_options.append(options7)
@@ -347,34 +355,58 @@ all_options.append(options18)
 all_answers.append(ans18)
 all_feedback.append(fb18)
 
-
-options19 = ['1. Raspberry Pi Interface, 2. Arduino Interfaces', '1. Arduino Interface, 2. Raspberry Pi Interfaces',
-             '1.Pmod A interface, 2. Pmod B interfaces', '1.Pmod B interface, 2. Pmod A interfaces']
-ans19 = '1. Raspberry Pi Interface, 2. Arduino Interfaces'
-fb19_a = '[bold green]Correct[/bold green]'
-fb19_b = '[bold red]Incorrect![/bold red]'
-fb19_c = '[bold red]Incorrect![/bold red]'
-fb19_d = '[bold red]Incorrect![/bold red]'
+options19 = ['Automotive driver assistance systems', 'Industrial control systems',
+             'Remote robotic assisted surgery system', 'All of the above']
+ans19 = 'All of the above'
+fb19_a = '[bold red]Incorrect![/bold red]It\'s one of the applications but there are more'
+fb19_b = '[bold red]Incorrect![/bold red]It\'s one of the applications but there are more'
+fb19_c = '[bold red]Incorrect![/bold red]It\'s one of the applications but there are more'
+fb19_d = '[bold green]Correct![/bold green] You got it'
 fb19 = [fb19_a, fb19_b, fb19_c, fb19_d]
 
 all_options.append(options19)
 all_answers.append(ans19)
 all_feedback.append(fb19)
 
-options20 = ['1.USB 2. SD Card 3. Ethernet 4. Pmod interfaces',
-             '1. MicroUSB 2. MicroSD card 3. Ethernet  4. Raspberry Pi interfaces',
-             '1. MicroUSB 2. MicroSD card 3. Ethernet  4. Pmod interfaces',
-             '1.USB, 2. SD card 3. Ethernet 4. Arduino Interface']
-ans20 = '1. MicroUSB 2. MicroSD card 3. Ethernet  4. Pmod interfaces'
+options20 = ['C, Ruby, Python', 'Julia, Python, R', 'C++, Python', 'C, C++, C#']
+ans20 = 'Julia, Python, R'
 fb20_a = '[bold red]Incorrect![/bold red]'
-fb20_b = '[bold red]Incorrect![/bold red]'
-fb20_c = '[bold green]Correct[/bold green]'
+fb20_b = '[bold green]Correct[/bold green]'
+fb20_c = '[bold red]Incorrect![/bold red]'
 fb20_d = '[bold red]Incorrect![/bold red]'
 fb20 = [fb20_a, fb20_b, fb20_c, fb20_d]
 
 all_options.append(options20)
 all_answers.append(ans20)
 all_feedback.append(fb20)
+
+options21 = ['1. Raspberry Pi Interface, 2. Arduino Interfaces', '1. Arduino Interface, 2. Raspberry Pi Interfaces',
+             '1.Pmod A interface, 2. Pmod B interfaces', '1.Pmod B interface, 2. Pmod A interfaces']
+ans21 = '1. Raspberry Pi Interface, 2. Arduino Interfaces'
+fb21_a = '[bold green]Correct[/bold green]'
+fb21_b = '[bold red]Incorrect![/bold red]'
+fb21_c = '[bold red]Incorrect![/bold red]'
+fb21_d = '[bold red]Incorrect![/bold red]'
+fb21 = [fb21_a, fb21_b, fb21_c, fb21_d]
+
+all_options.append(options21)
+all_answers.append(ans21)
+all_feedback.append(fb21)
+
+options22 = ['1.USB 2. SD Card 3. Ethernet 4. Pmod interfaces',
+             '1. MicroUSB 2. MicroSD card 3. Ethernet  4. Raspberry Pi interfaces',
+             '1. MicroUSB 2. MicroSD card 3. Ethernet  4. Pmod interfaces',
+             '1.USB, 2. SD card 3. Ethernet 4. Arduino Interface']
+ans22 = '1. MicroUSB 2. MicroSD card 3. Ethernet  4. Pmod interfaces'
+fb22_a = '[bold red]Incorrect![/bold red]'
+fb22_b = '[bold red]Incorrect![/bold red]'
+fb22_c = '[bold green]Correct[/bold green]'
+fb22_d = '[bold red]Incorrect![/bold red]'
+fb22 = [fb22_a, fb22_b, fb22_c, fb22_d]
+
+all_options.append(options22)
+all_answers.append(ans22)
+all_feedback.append(fb22)
 
 ard_desc = 'An Arduino comes with a microcontroller. Unlike a Raspberry Pi, it does not have an operating system and ' \
            'can only run programs that were created and compiled specifically for Arduino boards, mostly written in ' \
@@ -386,7 +418,7 @@ rpi_desc = 'Raspberry Pis come with a microprocessor. They\'re pretty powerful, 
 fpga_desc = 'FPGA stands for Field Programmable Gate Array. As you saw from the presentation, they are usable only ' \
             'after they\'ve been configured, creating a device whose architecture is customized for your task. This ' \
             'makes them efficient, adaptable, and useful for plenty of applications--medical devices, spacecrafts, ' \
-            'self-driving cars, etc. Shown below is an evaluation board, with a Spartan-6 FPGA.'
+            'self-driving cars, etc. Shown below is an evaluation board, with a ZYNQberry FPGA.'
 
 platform_options = [('Arduino', 0), ('Raspberry Pi', 1), ('FPGA', 2)]
 p_val = 0
@@ -450,11 +482,11 @@ def populate_questions():
             platforms = pop_platforms()
             question.append(Markdown('#### Refer to the following dropdown widget for more info on each platform!'))
             question.append(platforms)
-        if i == 19:
+        if i == 20:
             img_choice = 0
             platforms = pop_images(img_choice)
             question.append(platforms)
-        if i == 20:
+        if i == 21:
             img_choice = 1
             platforms = pop_images(img_choice)
             question.append(platforms)
