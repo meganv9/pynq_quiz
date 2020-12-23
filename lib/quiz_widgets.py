@@ -21,7 +21,7 @@ q_descriptions = ['What is PYNQ?', 'Which of the following environments is meant
                   'in the workshop presentation. \n 1. A(n) __ is deployed close to hardware, and can be useful for '
                   'working with sensors and buttons. \n 2. A(n) __ runs an operating system (commonly Linux), '
                   'and acts like a little computer.\n 3. A(n) __ needs its architecture defined by the user.',
-                  'What languages does Jupyter support?',
+                  'The name, Jupyter, comes from which of the core supported programming languages?',
                   'What does the Zynq system on a chip offer: select the appropriate options',
                   'What component on the PYNQ-Z2 board contains the PS/PL?',
                   'True or false: PYNQ offers Arduino and Raspberry Pi interfaces',
@@ -160,7 +160,7 @@ all_feedback.append(fb6)
 options7 = ['C, Ruby, Python', 'Julia, Python, R', 'C++, Python', 'C, C++, C#']
 ans7 = 'Julia, Python, R'
 fb7_a = '[bold red]Incorrect![/bold red]'
-fb7_b = '[bold green]Correct[/bold green]'
+fb7_b = '[bold green]Correct, Julia, Python, and R. Jupyter ships with the IPython kernel, which allows you to write your programs in Python, but there are currently over 100 other kernels that you can also use.[/bold green]'
 fb7_c = '[bold red]Incorrect![/bold red]'
 fb7_d = '[bold red]Incorrect![/bold red]'
 fb7 = [fb7_a, fb7_b, fb7_c, fb7_d]
