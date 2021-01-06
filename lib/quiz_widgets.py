@@ -160,7 +160,7 @@ all_feedback.append(fb6)
 options7 = ['C, Ruby, Python', 'Julia, Python, R', 'C++, Python', 'C, C++, C#']
 ans7 = 'Julia, Python, R'
 fb7_a = '[bold red]Incorrect![/bold red]'
-fb7_b = '[bold green]Correct, Julia, Python, and R. Jupyter ships with the IPython kernel, which allows you to write your programs in Python, but there are currently over 100 other kernels that you can also use.[/bold green]'
+fb7_b = '[bold green]Correct[/bold green], Julia, Python, and R. Jupyter ships with the IPython kernel, which allows you to write your programs in Python, but there are currently over 100 other kernels that you can also use.'
 fb7_c = '[bold red]Incorrect![/bold red]'
 fb7_d = '[bold red]Incorrect![/bold red]'
 fb7 = [fb7_a, fb7_b, fb7_c, fb7_d]
